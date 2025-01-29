@@ -82,39 +82,20 @@ int main() {
 
 **-------------------------------------------------------------------------------------------------------------------------------------------------------------------**
 
-## OOPS Assignment Solutions
 
+# OOPS Assignment Solutions
+
+## Assignment: Shape Class Hierarchy
 ### Problem Statement
-2. Create a base class `Shape` with methods to calculate the area and perimeter (pure virtual). Implement derived classes `Rectangle` and `Circle` that inherit from `Shape` and provide their own area and perimeter calculations.
+Create a base class `Shape` with methods to calculate the area and perimeter (pure virtual). Implement derived classes `Rectangle` and `Circle` that inherit from `Shape` and provide their own area and perimeter calculations.
 
-## Coding Platform Used
+### Coding Platform Used
 - C++
 
-## Approach and Solution Explanation
+### Approach and Solution Explanation
 To solve the problem, we implemented an abstract base class named `Shape` that defines the interface for calculating the area and perimeter of different shapes. The derived classes `Rectangle` and `Circle` implement these methods to provide specific calculations for their respective shapes.
 
-### Class Structure
-1. **Base Class: `Shape`**
-   - This is an abstract class that contains two pure virtual methods:
-     - `area()`: A method to calculate the area of the shape.
-     - `perimeter()`: A method to calculate the perimeter of the shape.
-
-2. **Derived Class: `Rectangle`**
-   - Inherits from `Shape`.
-   - Contains private attributes for `length` and `width`.
-   - Implements the `area()` method to return the area of the rectangle.
-   - Implements the `perimeter()` method to return the perimeter of the rectangle.
-
-3. **Derived Class: `Circle`**
-   - Inherits from `Shape`.
-   - Contains a private attribute for `radius`.
-   - Implements the `area()` method to return the area of the circle.
-   - Implements the `perimeter()` method to return the perimeter of the circle.
-
 ### Example Implementation
-
-Here is the implementation of the `Shape`, `Rectangle`, and `Circle` classes in C++:
-
 ```cpp
 #include <iostream>
 
@@ -175,4 +156,12 @@ int main() {
 
     return 0;
 }
+
+
+
+
+ 
+
+
+    
 
