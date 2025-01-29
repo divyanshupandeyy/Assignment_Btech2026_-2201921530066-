@@ -70,3 +70,97 @@ int main() {
 
     return 0;
 }
+
+# OOPS Assignment Solutions
+
+## Problem Statement
+2. Create a base class `Shape` with methods to calculate the area and perimeter (pure virtual). Implement derived classes `Rectangle` and `Circle` that inherit from `Shape` and provide their own area and perimeter calculations.
+
+## Coding Platform Used
+- C++
+
+## Approach and Solution Explanation
+To solve the problem, we implemented an abstract base class named `Shape` that defines the interface for calculating the area and perimeter of different shapes. The derived classes `Rectangle` and `Circle` implement these methods to provide specific calculations for their respective shapes.
+
+### Class Structure
+1. **Base Class: `Shape`**
+   - This is an abstract class that contains two pure virtual methods:
+     - `area()`: A method to calculate the area of the shape.
+     - `perimeter()`: A method to calculate the perimeter of the shape.
+
+2. **Derived Class: `Rectangle`**
+   - Inherits from `Shape`.
+   - Contains private attributes for `length` and `width`.
+   - Implements the `area()` method to return the area of the rectangle.
+   - Implements the `perimeter()` method to return the perimeter of the rectangle.
+
+3. **Derived Class: `Circle`**
+   - Inherits from `Shape`.
+   - Contains a private attribute for `radius`.
+   - Implements the `area()` method to return the area of the circle.
+   - Implements the `perimeter()` method to return the perimeter of the circle.
+
+### Example Implementation
+
+Here is the implementation of the `Shape`, `Rectangle`, and `Circle` classes in C++:
+
+```cpp
+#include <iostream>
+
+using namespace std;
+
+class Shape {
+public:
+    virtual double area() const = 0; // Pure virtual function for area
+    virtual double perimeter() const = 0; // Pure virtual function for perimeter
+};
+
+class Rectangle : public Shape {
+private:
+    double length, width;
+
+public:
+    Rectangle(double l, double w) {
+        length = l;
+        width = w;
+    }
+
+    double area() const override {
+        return length * width; // Area of rectangle
+    }
+
+    double perimeter() const override {
+        return 2 * (length + width); // Perimeter of rectangle
+    }
+};
+
+class Circle : public Shape {
+private:
+    double radius;
+
+public:
+    Circle(double r) {
+        radius = r;
+    }
+
+    double area() const override {
+        return 3.14 * radius * radius; // Area of circle
+    }
+
+    double perimeter() const override {
+        return 2 * 3.14 * radius; // Perimeter of circle
+    }
+};
+
+int main() {
+    Rectangle rect(5, 3); // Create a rectangle with length 5 and width 3
+    Circle circ(4); // Create a circle with radius 4
+
+    cout << "Rectangle Area: " << rect.area() << endl; // Display rectangle area
+    cout << "Rectangle Perimeter: " << rect.perimeter() << endl; // Display rectangle perimeter
+
+    cout << "Circle Area: " << circ.area() << endl; // Display circle area
+    cout << "Circle Perimeter: " << circ.perimeter() << endl; // Display circle perimeter
+
+    return 0;
+}
