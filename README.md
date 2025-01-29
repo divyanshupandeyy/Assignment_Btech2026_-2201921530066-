@@ -80,11 +80,11 @@ int main() {
 
 
 
+**-------------------------------------------------------------------------------------------------------------------------------------------------------------------**
 
+## OOPS Assignment Solutions
 
-# OOPS Assignment Solutions
-
-## Problem Statement
+### Problem Statement
 2. Create a base class `Shape` with methods to calculate the area and perimeter (pure virtual). Implement derived classes `Rectangle` and `Circle` that inherit from `Shape` and provide their own area and perimeter calculations.
 
 ## Coding Platform Used
