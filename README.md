@@ -179,7 +179,82 @@ int main() {
 }
 
 
+**-------------------------------------------------------------------------------------------------------------------------------------------------**
 
+# Assignment_BTech2026_[Roll Number]
+
+## Problem Statement
+
+Create a class `Person` that includes a static member variable `count` to keep track of the number of instances created. The class should have the following features:
+- A constructor that initializes the name of the person and increments the `count` each time a new instance is created.
+- A static method `getCount()` that returns the current value of `count`.
+- A method `getName()` that returns the name of the person.
+
+## Coding Platform Used
+
+- C++ (VS CODE)
+
+## Approach and Solution Explanation
+
+1. **Class Definition**: 
+   - The `Person` class is defined with a private member variable `name` to store the name of the person and a static member variable `count` to keep track of the number of `Person` instances created.
+
+2. **Constructor**:
+   - The constructor takes a string parameter `n` to initialize the `name` variable. Each time a new `Person` object is instantiated, the constructor increments the static `count` variable by 1.
+
+3. **Static Method**:
+   - The static method `getCount()` is defined to return the current value of the `count` variable. This method can be called without creating an instance of the `Person` class.
+
+4. **Instance Method**:
+   - The method `getName()` is defined to return the name of the person. This method is called on an instance of the `Person` class.
+
+5. **Static Member Initialization**:
+   - The static member variable `count` is initialized to 0 outside the class definition.
+
+6. **Main Function**:
+   - In the `main()` function, two instances of the `Person` class are created: `person1` with the name "Alice" and `person2` with the name "Bob".
+   - The total number of `Person` instances created is printed using the `getCount()` method.
+   - The names of the created persons are printed using the `getName()` method.
+
+### Code Example
+
+```cpp
+#include <iostream>
+#include <string>
+
+class Person {
+private:
+    std::string name;
+    static int count;
+
+public:
+    Person(std::string n) {
+        name = n;
+        count = count + 1;
+    }
+
+    static int getCount() {
+        return count;
+    }
+
+    std::string getName() const {
+        return name;
+    }
+};
+
+int Person::count; 
+Person::count = 0;
+
+int main() {
+    Person person1("Alice");
+    Person person2("Bob");
+
+    std::cout << "Total Persons: " << Person::getCount() << std::endl;
+    std::cout << person1.getName() << std::endl;
+    std::cout << person2.getName() << std::endl;
+
+    return 0;
+}
  
 
 
