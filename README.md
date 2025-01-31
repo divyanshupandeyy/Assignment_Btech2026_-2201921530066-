@@ -255,6 +255,103 @@ int main() {
 
     return 0;
 }
+
+
+**------------------------------------------------------------------------------------------------------------------------------------------------------------------**
+
+# README.md
+
+# Assignment_BTech2026_[2201921530066]
+
+## Problem Statement
+
+Create a class `Employee` with attributes `name` and `salary`. Implement overloaded operators `+` and `-` to combine and compare employees based on their salaries. The class should support the following functionalities:
+- Comparing two employees based on their salaries using the `<` and `>` operators.
+- Combining the salaries of two employees using the `+` operator to create a new `Employee` object with a combined salary.
+- Calculating the difference in salaries between two employees using the `-` operator to create a new `Employee` object with the salary difference.
+
+## Coding Platform Used
+
+- C++ (GCC Compiler)
+
+## Approach and Solution Explanation
+
+1. **Class Definition**:
+   - The `Employee` class is defined with two private member variables: `name` (a string) to store the employee's name and `salary` (a double) to store the employee's salary.
+
+2. **Constructor**:
+   - The constructor initializes the `name` and `salary` attributes using an initializer list.
+
+3. **Getter Method**:
+   - The `getSalary()` method is defined to return the salary of the employee.
+
+4. **Operator Overloading**:
+   - The `<` operator is overloaded to compare the salaries of two `Employee` objects. It returns `true` if the salary of the current object is less than that of the other object.
+   - The `>` operator is overloaded similarly to compare salaries in the opposite direction.
+   - The `+` operator is overloaded to combine the salaries of two `Employee` objects. It returns a new `Employee` object with the name "Combined" and the total salary.
+   - The `-` operator is overloaded to calculate the difference in salaries between two `Employee` objects. It returns a new `Employee` object with the name "Difference" and the absolute difference in salary.
+
+5. **Main Function**:
+   - In the `main()` function, two `Employee` objects are created: `emp1` with the name "Alice" and a salary of 5000, and `emp2` with the name "Bob" and a salary of 6000.
+   - The program compares the salaries of the two employees and prints which employee has a higher salary.
+   - The combined salary of both employees is calculated using the `+` operator, and the result is printed.
+   - The salary difference is calculated using the `-` operator, and the result is printed.
+
+### Code Example
+
+```cpp
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+class Employee {
+private:
+    string name;
+    double salary;
+
+public:
+    Employee(string n, double s) : name(n), salary(s) {}
+
+    double getSalary() const {
+        return salary;
+    }
+
+    bool operator<(const Employee& other) const {
+        return salary < other.salary;
+    }
+
+    bool operator>(const Employee& other) const {
+        return salary > other.salary;
+    }
+
+    Employee operator+(const Employee& other) const {
+        return Employee("Combined", salary + other.salary);
+    }
+
+    Employee operator-(const Employee& other) const {
+        return Employee("Difference", salary - other.salary);
+    }
+};
+
+int main() {
+    Employee emp1("Alice", 5000);
+    Employee emp2("Bob", 6000);
+
+    if (emp1 < emp2) {
+        cout << "Bob has a higher salary than Alice." << endl;
+    } else {
+        cout << "Alice has a higher salary than Bob." << endl;
+    }
+
+    Employee combined = emp1 + emp2;
+    cout << "Combined Salary: " << combined.getSalary() << endl;
+
+    Employee difference = emp1 - emp2;
+    cout << "Salary Difference: " << difference.getSalary() << endl;
+
+    return 0;
+}
  
 
 
