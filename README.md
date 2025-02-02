@@ -352,6 +352,45 @@ int main() {
 
     return 0;
 }
+**----------------------------------------------------------------------------------------------------------------------------------------------------------------**
+# Time Class in C++
+
+## Problem Statement  
+Create a class `Time` with attributes `hours` and `minutes`. Implement functionality to display time in the format `"hh:mm"`.  
+
+## Approach  
+- Define a `Time` class with private attributes `hours` and `minutes`.  
+- Implement a constructor to initialize these attributes.  
+- Create a `display()` method to print the time in the `"hh:mm"` format.  
+- Ensure proper formatting by adding a leading zero if `minutes < 10`.  
+- Demonstrate the functionality in the `main()` function.  
+
+## Code Example  
+
+```cpp
+#include <iostream>
+
+class Time {
+    int hours, minutes;
+public:
+    Time(int h, int m);
+    void display() const;
+};
+
+Time::Time(int h, int m) : hours(h), minutes(m) {}
+
+void Time::display() const {
+    std::cout << hours << ":" << (minutes < 10 ? "0" : "") << minutes;
+}
+
+int main() {
+    Time time(14, 30);
+    std::cout << "Time: ";
+    time.display();
+    std::cout << std::endl;
+    return 0;
+}
+
  
 
 
