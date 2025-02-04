@@ -435,9 +435,51 @@ This implementation is done in **C++**. The code is designed to be run in any st
 - Microsoft Visual Studio
 - Online C++ compilers (e.g., HackerRank, LeetCode)
 
-## Example Explanation
 
-### Example Input:
+### Explanation:
+- The first line of input `20` represents the age of the student.
+- The second line `john` is the first name of the student.
+- The third line `doe` is the last name of the student.
+- The fourth line `12` represents the standard (grade) of the student.
+
+The output combines all these details into a single line, formatted as specified.
+
+## Code Implementation
+
+Here is a sample implementation of the `Student` struct in C++:
+
+```cpp
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+// Define the Student struct
+struct Student {
+    int age;
+    string first_name;
+    string last_name;
+    int standard;
+};
+
+int main() {
+    // Create a Student object
+    Student student;
+
+    // Input the details of the student
+    cin >> student.age;
+    cin >> student.first_name;
+    cin >> student.last_name;
+    cin >> student.standard;
+
+    // Output the details of the student
+    cout << student.age << " " 
+         << student.first_name << " " 
+         << student.last_name << " " 
+         << student.standard << endl;
+
+    return 0;
+}
  
 
 
