@@ -391,6 +391,53 @@ int main() {
     return 0;
 }
 
+**-----------------------------------------------------------------------------------------------------------------------------------------------------**
+# Student Struct Implementation
+
+## Problem Statement
+
+You are required to create a struct named `Student` that represents the details of a student. The struct should contain the following fields:
+
+- `age`: an integer representing the age of the student.
+- `first_name`: a string consisting of lower-case Latin characters ('a'-'z') representing the first name of the student.
+- `last_name`: a string consisting of lower-case Latin characters ('a'-'z') representing the last name of the student.
+- `standard`: an integer representing the standard (grade) of the student.
+
+The program should read the details of a student from the input and then output the details in a single line, with each field separated by a space.
+
+### Input Format
+
+The input will consist of four lines:
+1. An integer representing the age.
+2. A string representing the first name of the student.
+3. A string representing the last name of the student.
+4. An integer representing the standard of the student.
+
+**Note**: The number of characters in `first_name` and `last_name` will not exceed 50.
+
+### Output Format
+
+The output will be a single line consisting of `age`, `first_name`, `last_name`, and `standard`, each separated by a single space.
+
+## Approach Used
+
+1. **Struct Definition**: A struct named `Student` is defined to encapsulate the details of a student. This struct contains four fields: `age`, `first_name`, `last_name`, and `standard`.
+
+2. **Input Handling**: The program uses standard input to read the values for each field of the `Student` struct. This is done using `cin` for reading the integer and string values.
+
+3. **Output Formatting**: After reading the input, the program outputs the details of the student in a single line, ensuring that each field is separated by a space. This is achieved using `cout`.
+
+4. **Data Types**: Appropriate data types are used for each field in the struct to ensure that the data is stored correctly (e.g., `int` for age and standard, `string` for names).
+
+## Platform Used
+
+This implementation is done in **C++**. The code is designed to be run in any standard C++ environment, such as:
+- Microsoft Visual Studio
+- Online C++ compilers (e.g., HackerRank, LeetCode)
+
+## Example Explanation
+
+### Example Input:
  
 
 
