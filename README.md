@@ -117,7 +117,7 @@ To solve the problem, we implemented an abstract base class named `Shape` that d
 
 Here is the implementation of the `Shape`, `Rectangle`, and `Circle` classes in C++:
 
-```cpp
+cpp
 #include <iostream>
 
 using namespace std;
