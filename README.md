@@ -23,7 +23,7 @@ To solve the problem, we implemented a class named `BankAccount` that encapsulat
 
 Here is the implementation of the `BankAccount` class in C++:
 
-```cpp
+cpp
 #include <iostream>
 #include <string>
 
