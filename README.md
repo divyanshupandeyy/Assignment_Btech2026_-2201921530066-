@@ -481,7 +481,49 @@ int main() {
     return 0;
 }
  
+**---------------------------------------------------------------------------------------------------------------------------------------------------------------------**
 
+# Student Score Comparison
+
+## Problem Statement 7
+
+Kristen is a contender for valedictorian of her high school. She wants to know how many students (if any) have scored higher than her in the exams given during this semester. 
+
+You need to create a class named `Student` with the following specifications:
+- An instance variable to hold a student's exam scores.
+- A `void input()` function that reads integers and saves them to the instance variable.
+- An `int calculateTotalScore()` function that returns the sum of the student's scores.
+
+The program will read the number of students and their respective exam scores, then determine how many students scored higher than Kristen.
+
+### Input Format
+- The first line contains an integer, `n`, the number of students in Kristen's class.
+- The subsequent lines contain each student's exam grades for this semester.
+
+### Output Format
+- The program outputs the number of students who scored higher than Kristen.
+
+## Coding Platform Used
+
+This implementation is done in **C++**. The code is designed to be run in any standard C++ environment, such as:
+- GCC (GNU Compiler Collection)
+- Microsoft Visual Studio
+- Online C++ compilers (e.g., HackerRank, LeetCode)
+
+## Approach and Solution Explanation
+
+1. **Class Definition**:
+   - A class named `Student` is defined with a private member variable `scores`, which is a vector that holds the exam scores.
+   - The `input()` method reads 5 scores from standard input and stores them in the `scores` vector.
+   - The `calculateTotalScore()` method calculates and returns the sum of the scores stored in the `scores` vector.
+
+2. **Main Function**:
+   - The program first reads the number of students.
+   - It creates an instance of `Student` for Kristen and reads her scores using the `input()` method.
+   - It calculates Kristen's total score using the `calculateTotalScore()` method.
+   - The program then loops through the remaining students, reading their scores and calculating their total scores.
+   - For each student, it checks if their total score is greater than Kristen's and increments a counter if it is.
+   - Finally, it prints the count of students who scored higher than Kristen.
 
     
 
